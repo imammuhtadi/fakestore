@@ -1,6 +1,21 @@
 // ignore_for_file: unnecessary_this
 
 class ProductResponse {
+  List<Product>? products;
+
+  ProductResponse({this.products});
+
+  ProductResponse.fromJson(List<dynamic>? json) {
+    if (json != null) {
+      products = <Product>[];
+      for (var v in json) {
+        products!.add(Product.fromJson(v));
+      }
+    }
+  }
+}
+
+class Product {
   int? id;
   String? title;
   double? price;
@@ -9,7 +24,7 @@ class ProductResponse {
   String? image;
   Rating? rating;
 
-  ProductResponse({
+  Product({
     this.id,
     this.title,
     this.price,
@@ -19,10 +34,10 @@ class ProductResponse {
     this.rating,
   });
 
-  ProductResponse.fromJson(Map<String, dynamic> json) {
+  Product.fromJson(Map<String, dynamic> json) {
     id = json['id'];
     title = json['title'];
-    price = json['price'];
+    price = double.parse(json['price'].toString());
     description = json['description'];
     category = json['category'];
     image = json['image'];
@@ -51,7 +66,7 @@ class Rating {
   Rating({this.rate, this.count});
 
   Rating.fromJson(Map<String, dynamic> json) {
-    rate = json['rate'];
+    rate = double.parse(json['rate'].toString());
     count = json['count'];
   }
 

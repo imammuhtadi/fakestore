@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:fakestore/config/config.dart';
 
 class Failure {
   final String message;
@@ -10,9 +11,9 @@ class Failure {
 }
 
 class ApiService {
-  Future<Map<String, dynamic>> get({required String path}) async {
+  Future<dynamic> get({required String path}) async {
     try {
-      final response = await Dio().get(path);
+      final response = await Dio().get(ConfigApps.baseUrl + path);
       if (response.statusCode == 200) {
         return response.data;
       } else {
