@@ -1,19 +1,6 @@
 // ignore_for_file: unnecessary_this
 
-class ProductResponse {
-  List<Product>? products;
-
-  ProductResponse({this.products});
-
-  ProductResponse.fromJson(List<dynamic>? json) {
-    if (json != null) {
-      products = <Product>[];
-      for (var v in json) {
-        products!.add(Product.fromJson(v));
-      }
-    }
-  }
-}
+import 'package:fakestore/model/rating.dart';
 
 class Product {
   int? id;
@@ -55,25 +42,6 @@ class Product {
     if (this.rating != null) {
       data['rating'] = this.rating!.toJson();
     }
-    return data;
-  }
-}
-
-class Rating {
-  double? rate;
-  int? count;
-
-  Rating({this.rate, this.count});
-
-  Rating.fromJson(Map<String, dynamic> json) {
-    rate = double.parse(json['rate'].toString());
-    count = json['count'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['rate'] = this.rate;
-    data['count'] = this.count;
     return data;
   }
 }
