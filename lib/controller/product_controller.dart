@@ -1,7 +1,7 @@
 import 'package:fakestore/model/product.dart';
-import 'package:fakestore/service/api_service.dart' as api_service;
 import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
+import 'package:fakestore/service/api_service.dart' as api_service;
 
 class ProductController extends GetxController {
   var isLoading = false.obs;
