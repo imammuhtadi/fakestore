@@ -1,26 +1,15 @@
-import 'package:dio/dio.dart';
+import 'dart:convert';
 import 'package:fakestore/config/config.dart';
+import 'package:fakestore/model/product_response.dart';
+import 'package:http/http.dart' as http;
 
-class Failure {
-  final String message;
-
-  Failure(this.message);
-
-  @override
-  String toString() => message;
-}
-
-class ApiService {
-  Future<dynamic> get({required String path}) async {
-    try {
-      final response = await Dio().get(ConfigApps.baseUrl + path);
-      if (response.statusCode == 200) {
-        return response.data;
-      } else {
-        throw Failure("Failed to get data");
-      }
-    } on DioError catch (e) {
-      throw Failure(e.response!.statusCode.toString());
-    }
+Future<ProductResponse> fetchProducts(http.Client client) async {
+  final response = await client.get(Uri.parse(
+    ConfigApps.baseUrl + 'products',
+  ));
+  if (response.statusCode == 200) {
+    return ProductResponse.fromJson(jsonDecode(response.body));
+  } else {
+    throw Exception('Failed to load products');
   }
 }
