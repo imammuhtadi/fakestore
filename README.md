@@ -17,9 +17,11 @@ A new Flutter project.
 
 - Flutter 2.10.3 or up • channel stable • https://github.com/flutter/flutter.git
 - Dart 2.16.1 or up
+- Android and iOS SDK
 
 ## Instruction to build and deploy the app
 
+- Make sure you have Android and iOS sdk installed
 - Install Flutter 2.10.3 or up and Dart 2.16.1 or up
 - Clone this repo
 - Run flutter pub get in terminal
