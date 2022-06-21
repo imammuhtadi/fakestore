@@ -1,4 +1,3 @@
-import 'package:fakestore/config/config.dart';
 import 'package:fakestore/controller/product_controller.dart';
 import 'package:fakestore/screen/widget/product_mobile.dart';
 import 'package:fakestore/screen/widget/product_tablet.dart';
