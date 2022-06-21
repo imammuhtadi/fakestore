@@ -4,8 +4,9 @@ A new Flutter project.
 
 ## Screenshot
 
-![Mobile View](https://github.com/imammuhtadi/fakestore/blob/master/screenshot/mobile.png)
-![Tablet View](https://github.com/imammuhtadi/fakestore/blob/master/screenshot/tablet.png)
+<img src="https://github.com/imammuhtadi/fakestore/blob/master/screenshot/mobile.png" width="150" />
+<img src="https://github.com/imammuhtadi/fakestore/blob/master/screenshot/tablet.png" width="200" />
+
 
 ## Supported Devices
 
