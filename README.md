@@ -4,9 +4,11 @@ A new Flutter project.
 
 ## Screenshot
 
-<img src="https://github.com/imammuhtadi/fakestore/blob/master/screenshot/mobile.png" width="150" />
-<img src="https://github.com/imammuhtadi/fakestore/blob/master/screenshot/tablet.png" width="200" />
-
+<p align="center">
+  <img alt="Light" src="https://github.com/imammuhtadi/fakestore/blob/master/screenshot/mobile.png" width="35%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="https://github.com/imammuhtadi/fakestore/blob/master/screenshot/tablet.png" width="50%">
+</p>
 
 ## Supported Devices
 
