@@ -2,6 +2,11 @@
 
 A new Flutter project.
 
+## Screenshot
+
+![Mobile View](https://github.com/imammuhtadi/fakestore/blob/master/screenshot/mobile.png)
+![Tablet View](https://github.com/imammuhtadi/fakestore/blob/master/screenshot/tablet.png)
+
 ## Supported Devices
 
 - Android
